@@ -1,2 +1,3 @@
-# airbnb-backend
-Backend API for Airbnb-like application
+# Airbnb Backend
+
+Ready-to-deploy FastAPI backend.
