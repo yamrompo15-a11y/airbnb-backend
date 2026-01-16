@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from database import engine, Base
 
 app = FastAPI(
     title="ThinStay Backend",
@@ -6,9 +7,10 @@ app = FastAPI(
     version="1.0.0"
 )
 
+@app.on_event("startup")
+def startup():
+    Base.metadata.create_all(bind=engine)
+
 @app.get("/")
 def root():
-    return {
-        "status": "ok",
-        "service": "ThinStay Backend"
-    }
+    return {"status": "ThinStay backend running"}
