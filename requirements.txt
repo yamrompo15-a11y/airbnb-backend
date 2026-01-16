@@ -4,3 +4,4 @@ SQLAlchemy==1.4.49
 psycopg2-binary
 pydantic
 passlib[bcrypt]
+python-multipart
