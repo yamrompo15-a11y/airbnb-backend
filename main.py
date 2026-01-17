@@ -1,6 +1,6 @@
-from app.models import user
 from fastapi import FastAPI
-from database import engine, Base
+from app.database import engine, Base
+from app.models import user  # noqa
 
 app = FastAPI(
     title="ThinStay Backend",
